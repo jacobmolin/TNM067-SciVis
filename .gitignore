@@ -4,10 +4,10 @@
 # Except...
 !.gitignore
 !/README.md
-!modules/
-!modules/*
-!processors/
-!modules/tnm067lab1/processors/*
-!utils/
-!utils/*
-!/modules/tnm067lab1/utils/*
+# !modules/
+# !modules/*
+# !processors/
+# !modules/tnm067lab1/processors/*
+# !utils/
+# !utils/*
+# !/modules/tnm067lab1/utils/*
