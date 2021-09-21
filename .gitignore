@@ -4,10 +4,19 @@
 # Except...
 !.gitignore
 !/README.md
-# !modules/
-# !modules/*
+!modules/
+!modules/*
+
+# What is ignored for each lab/module is in 
+# a separate .gitignore for each module
+
+
+# !modules/tnm067lab1/
 # !processors/
 # !modules/tnm067lab1/processors/*
 # !utils/
 # !utils/*
 # !/modules/tnm067lab1/utils/*
+# !/modules/tnm067lab2/
+# !/modules/tnm067lab3/
+# !/modules/tnm067lab4/
