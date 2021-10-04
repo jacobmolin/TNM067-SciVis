@@ -1,0 +1,9 @@
+# Ignore everything
+# *
+
+# Except...
+!.gitignore
+!glsl/
+!glsl/tensor_glyphrenderer.geom
+!jacobian.cpp
+!*.pdf
