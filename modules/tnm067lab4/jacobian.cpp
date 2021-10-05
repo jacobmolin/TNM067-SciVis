@@ -11,7 +11,9 @@ namespace inviwo {
             // TASK 1: Calculate the Jacobian J
             // ox = delta x
             // oy = delta y
-            vec2 dVdx = (sampler.sample(position + ox) - sampler.sample(position - ox)) / (2.0 * offset.x); // why divide with offset?
+
+            // Why are we using sampler? What is it?
+            vec2 dVdx = (sampler.sample(position + ox) - sampler.sample(position - ox)) / (2.0 * offset.x);
             vec2 dVdy = (sampler.sample(position + oy) - sampler.sample(position - oy)) / (2.0 * offset.y);
 
             // J is a matrix

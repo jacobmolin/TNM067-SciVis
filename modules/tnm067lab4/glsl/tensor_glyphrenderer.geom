@@ -13,9 +13,9 @@ const float twoPi = 6.28318530718;
 void main(void) {
     vec2 center = gl_in[0].gl_Position.xy;
 
-    mat2 J = vJ[0]; // TODO: How to set to identity matrix???
+    mat2 J = vJ[0];
     mat2 Jsym = (J + transpose(J)) / 2.0;
-    // mat2 Jsym(vec2(1,0), vec2(0,1));
+    // mat2 Jsym(vec2(1,0), vec2(0,1)); // TODO: How to set to identity matrix???
 
     for (int i = 0; i < 32; i++) {
         // TASK 4: use the index to set the color based on where we are in the circle
@@ -33,20 +33,14 @@ void main(void) {
         float a2 = twoPi * ((i + 1) / 32.0);  // angle between y-axis and third point in the triangle
 
         vec2 o1 = vec2(cos(a1), sin(a1));  // calculate an offset vector for the second point in the triangle based on a1
-        vec2 o1J = J * o1;
         vec2 o1Jsym = Jsym * o1;
 
-        // gl_Position = vec4(center + o1 * radius, 0, 1);
-        // gl_Position = vec4(center + o1J * radius, 0, 1);
         gl_Position = vec4(center + o1Jsym * radius, 0, 1);
         EmitVertex();
 
         vec2 o2 = vec2(cos(a2), sin(a2));  // calculate an offset vector for the second point in the triangle based on a2
-        vec2 o2J = J * o2;
         vec2 o2Jsym = Jsym * o2;
 
-        // gl_Position = vec4(center + o2 * radius, 0, 1);
-        // gl_Position = vec4(center + o2J * radius, 0, 1);
         gl_Position = vec4(center + o2Jsym * radius, 0, 1);
         EmitVertex();
 
