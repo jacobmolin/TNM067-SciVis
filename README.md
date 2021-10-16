@@ -1,3 +1,11 @@
-# TNM067-Labs-Code
+# Laborations in the course TNM067 - Scientific Visualization
 
-Contains the code for the labs associated with TNM067.
+All implemented in C++
+
+#### 1. Interpolation, Colormaps and Heightfields
+
+#### 2. Scalar Fields and Volume Rendering
+
+#### 3. Vector Field Visualization
+
+#### 4. Tensor Field Visualization
